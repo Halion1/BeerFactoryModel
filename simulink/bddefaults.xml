@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BlockDiagramDefaults>
+  <MaskDefaults SelfModifiable="off">
+    <Display IconFrame="on" IconOpaque="opaque" RunInitForIconRedraw="analyze" IconRotate="none" PortRotate="default" IconUnits="autoscale"/>
+    <MaskParameter Evaluate="on" Tunable="on" NeverSave="off" Internal="off" ReadOnly="off" Enabled="on" Visible="on" ToolTip="on"/>
+    <DialogControl>
+      <ControlOptions Visible="on" Enabled="on" Row="new" HorizontalStretch="on" PromptLocation="top" Orientation="horizontal" Scale="linear" TextType="Plain Text" Expand="off" ShowFilter="on" ShowParameterName="on" WordWrap="on" AlignPrompts="off"/>
+    </DialogControl>
+  </MaskDefaults>
+  <BlockParameterDefaults>
+    <Block BlockType="Constant">
+      <P Name="Value">1</P>
+      <P Name="VectorParams1D">on</P>
+      <P Name="SamplingMode">Sample based</P>
+      <P Name="OutMin">[]</P>
+      <P Name="OutMax">[]</P>
+      <P Name="OutDataTypeStr">Inherit: Inherit from &apos;Constant value&apos;</P>
+      <P Name="LockScale">off</P>
+      <P Name="SampleTime">inf</P>
+      <P Name="FramePeriod">inf</P>
+      <P Name="PreserveConstantTs">off</P>
+    </Block>
+    <Block BlockType="Gain">
+      <P Name="Gain">1</P>
+      <P Name="Multiplication">Element-wise(K.*u)</P>
+      <P Name="ParamMin">[]</P>
+      <P Name="ParamMax">[]</P>
+      <P Name="ParamDataTypeStr">Inherit: Inherit via internal rule</P>
+      <P Name="OutMin">[]</P>
+      <P Name="OutMax">[]</P>
+      <P Name="OutDataTypeStr">Inherit: Inherit via internal rule</P>
+      <P Name="LockScale">off</P>
+      <P Name="RndMeth">Floor</P>
+      <P Name="SaturateOnIntegerOverflow">off</P>
+      <P Name="SampleTime">-1</P>
+    </Block>
+    <Block BlockType="Integrator">
+      <P Name="ExternalReset">none</P>
+      <P Name="InitialConditionSource">internal</P>
+      <P Name="InitialCondition">0</P>
+      <P Name="LimitOutput">off</P>
+      <P Name="UpperSaturationLimit">inf</P>
+      <P Name="LowerSaturationLimit">-inf</P>
+      <P Name="WrapState">off</P>
+      <P Name="WrappedStateUpperValue">pi</P>
+      <P Name="WrappedStateLowerValue">-pi</P>
+      <P Name="ShowSaturationPort">off</P>
+      <P Name="ShowStatePort">off</P>
+      <P Name="AbsoluteTolerance">auto</P>
+      <P Name="IgnoreLimit">off</P>
+      <P Name="ZeroCross">on</P>
+      <P Name="ContinuousStateAttributes">&apos;&apos;</P>
+    </Block>
+    <Block BlockType="Scope">
+      <P Name="DefaultConfigurationName">Simulink.scopes.TimeScopeBlockCfg</P>
+    </Block>
+    <Block BlockType="Sum">
+      <P Name="IconShape">round</P>
+      <P Name="Inputs">++</P>
+      <P Name="CollapseMode">All dimensions</P>
+      <P Name="CollapseDim">1</P>
+      <P Name="InputSameDT">off</P>
+      <P Name="AccumDataTypeStr">Inherit: Inherit via internal rule</P>
+      <P Name="OutMin">[]</P>
+      <P Name="OutMax">[]</P>
+      <P Name="OutDataTypeStr">Inherit: Inherit via internal rule</P>
+      <P Name="LockScale">off</P>
+      <P Name="RndMeth">Floor</P>
+      <P Name="SaturateOnIntegerOverflow">off</P>
+      <P Name="SampleTime">-1</P>
+    </Block>
+  </BlockParameterDefaults>
+</BlockDiagramDefaults>

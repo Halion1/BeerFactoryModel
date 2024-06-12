@@ -1,0 +1,13 @@
+tRange = [0 10];
+c = 0;
+[tSol,ySol] = ode45(@reactor1,tRange,c);
+
+plot(tSol,ySol,"k",LineWidth=1)
+title("Mass Balance in a Perfectly Stirred Tank")
+ylabel("Concentration (kg/m^3)")
+xlabel("Time (h)")
+
+
+function dcdt = reactor1(t,c)
+    dcdt = (1.950317-(1500*c))/1.95;
+end
